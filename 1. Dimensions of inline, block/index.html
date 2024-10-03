@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container default-width">
+      <h1>Full Width</h1>
+      <p>(No Centering)</p>
+      <div class="box">
+        <p>Width: 100% (default)</p>
+        <p>Display: Block (default)</p>
+        <p>Margin: 0 auto; (doesn't work)</p>
+        <p>Text-align: Center</p>
+      </div>
+    </div>
+
+    <div class="container partial-width">
+      <div class="title">
+        <h1>Fit Width</h1>
+        <p class="sub-title">text-align: center</p>
+      </div>
+      <div class="box">
+        <p>Width: fit-content</p>
+        <p>Display: block (default)</p>
+        <p>Margin: 0 auto;</p>
+        <p>Text-align: Center</p>
+      </div>
+    </div>
+
+    <div class="container full-width">
+      <div class="title">
+        <h1>Fit Width</h1>
+        <p class="sub-title">text-align: center</p>
+      </div>
+      <div class="box">
+        <p>Width: fit-content</p>
+        <p>Display: inline-block</p>
+        <p>Margin: 0 auto; (doesn't work)</p>
+        <p>Text-align: Center</p>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

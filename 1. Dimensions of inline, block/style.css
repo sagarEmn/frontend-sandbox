@@ -1,0 +1,102 @@
+:root {
+  --bg-primary: #f9f4ef;
+  --bg-secondary: #fffffe;
+
+  --ff-primary: "Ubuntu", sans-serif;
+  --fw-primary: 400;
+
+  --fc-primary: #020826;
+
+  --primary-accent: #8c7851;
+  --secondary-accent: #716040;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /* typography */
+  font-family: var(--ff-primary);
+  font-weight: 800;
+  font-style: normal;
+  color: var(--fc-heading);
+  font-size: 16px;
+
+  /* dimensions, margins */
+  max-width: 100%;
+  margin: 0;
+  background-color: var(--bg-primary);
+  padding: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0.6rem 0;
+}
+
+.partial-width {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.full-width {
+  margin: 0 auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.full-width .title {
+  text-align: center;
+}
+
+.container {
+  border: 2px solid black;
+  margin-bottom: 1.5em;
+  padding: 1rem;
+  background: var(--primary-accent);
+}
+
+.box {
+  margin-top: 1rem;
+  border: 2px solid black;
+  background: var(--bg-primary);
+  padding: 1rem;
+}
+
+.container,
+.box {
+  border-radius: 1.5rem;
+}
+
+.title p {
+  margin: 0;
+}
+
+.partial-width .title {
+  text-align: center;
+}
+
+.partial-width .box {
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 0.75rem;
+  }
+  p {
+    margin: 0.5em 0;
+  }
+  .box {
+    padding: 0.5em;
+  }
+}
