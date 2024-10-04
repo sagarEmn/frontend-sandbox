@@ -6,3 +6,8 @@
     <img src="screenshots/1.png" alt="Image of 1" width="550">
 </a>
 
+2. Responsive grid layout
+
+<a href="https://github.com/sagarEmn/basic-frontend-web/tree/main/2%20-%20Responsive%20grid%20layout">
+    <img src="screenshots/2.png" alt="Image of 2" width="250">
+</a>
