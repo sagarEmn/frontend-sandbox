@@ -50,8 +50,35 @@ html {
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* proper height */
 
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #2c3e50;
+  --background-color: #fdf2e9;
+  --text-color: #34495e;
+}
+
+body {
+  font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* display: grid; */
+  /* grid-template-rows: auto 1fr auto; */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+nav {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
