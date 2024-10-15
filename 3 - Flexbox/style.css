@@ -8,26 +8,6 @@ body {
 }
 /* html, body height setup */
 
-/* css reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-/* css reset */
-
 :root {
   --accent-clr-500: #FB6E86;
   --accent-clr-900: #DF1646;
