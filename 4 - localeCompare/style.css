@@ -1,12 +1,90 @@
-@import "./cssreset.css";
+@import "/cssreset.css";
 
 :root {
-  --accent-clr: #F71735;
+  /* color variables */
+  --accent-clr: #f71735;
 
   --primary-clr-900: #000000;
-  --primary-clr-600: #706C61;
-  
-  --secondary-clr-200: #F5F7DC;
-  --secondary-clr-600: #706C61;
+  --primary-clr-600: #706c61;
+
+  --secondary-clr-100: #ffffff;
+  --secondary-clr-200: #f5f7dc;
+
+  /* functional variables for colors*/
+  --bg-color: var(--primary-clr-900);
+
+  /* functional variables for structure */
+  --br: 0.7rem;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: var(--bg-color);
+  color: var(--secondary-clr-200);
+  font-size: 1.3rem;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.localeCompare-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+input {
+  background-color: var(--primary-clr-600);
+
+  border: none;
+  outline: none;
+}
+
+button {
+  background-color: var(--accent-clr);
+  border: none;
+  cursor: pointer;
+}
+
+.accent-highlight {
+  background-color: var(--accent-clr);
+}
+
+input,
+button,
+.accent-highlight {
+  border-radius: var(--br);
+  padding: 0.5rem 1rem;
+  color: var(--secondary-clr-200);
+}
+
+.localeCompare__input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.localeCompare__input-button-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+
+  max-width: 600px;
+}
+
+.localeCompare__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-block-end: 2rem;
+}

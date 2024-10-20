@@ -5,18 +5,41 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>localeCompare()</title>
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- font link -->
+
+    <!-- roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
       <section class="localeCompare-section">
-        <h1>Demonstrating usage of localeCompare() function of JavaScript!</h1>
-        <h2>Enter enter in the two variables to compare them:</h2>
-        <input type="text" id="first-variable" />
-        <input type="text" id="second-variable" />
-        <button id="compare-button">Compare</button>
+        <div class="localeCompare__title">
+          <h1>
+            Demonstration of
+            <span class="accent-highlight"> localeCompare() </span>
+          </h1>
+          <h2>Enter enter in the two variables to compare them:</h2>
+        </div>
 
-        <div class="result">
-          No Output
+        <div class="localeCompare__input-button-section">
+          <div class="localeCompare__input-section">
+            <label for="first-variable">First variable:</label>
+            <input type="text" id="first-variable" />
+            <label for="second-variable">Second variable:</label>
+            <input type="text" id="second-variable" />
+            <button id="compare-button">Compare</button>
+          </div>
+
+          <div class="result">No Output</div>
         </div>
       </section>
     </main>
