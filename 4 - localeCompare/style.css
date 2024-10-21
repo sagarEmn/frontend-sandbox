@@ -5,6 +5,7 @@
   --accent-clr: #f71735;
 
   --primary-clr-900: #000000;
+  --primary-clr-800: #1f1f1f;
   --primary-clr-600: #706c61;
 
   --secondary-clr-100: #ffffff;
@@ -74,7 +75,7 @@ button,
   gap: 1rem;
 }
 
-.localeCompare__input-button-section {
+.localeCompare__input-result-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2rem;
@@ -87,4 +88,24 @@ button,
   flex-direction: column;
   gap: 1rem;
   margin-block-end: 2rem;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-clr-800);
+  border-radius: var(--br);
+  aspect-ratio: 1/0.5;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+    padding: .5rem;
+  }
+
+  .localeCompare__input-result-section {
+    grid-template-columns: 1fr;
+  }
 }
