@@ -18,3 +18,26 @@ body {
   --bg-clr: var(--secondary-clr-900);
   --border-clr: var(--accent-clr-900);
 }
+
+main {
+  margin: 2rem;
+  border: 2px solid black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.item {
+  border: .5rem solid var(--accent-clr-900);
+  background-color: var(--accent-clr-500);
+  color: var(--secondary-clr-100);
+
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
