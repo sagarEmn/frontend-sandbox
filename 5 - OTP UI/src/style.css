@@ -1,15 +1,15 @@
 @import "reset.css";
 
 :root {
-  --primary-clr-900: #222831;
-  --secondary-clr-600: #393e46;
+  --primary-clr-900: #000000;
+  --secondary-clr-600: #303030;
   --tertiary-clr-300: #948979;
 
-  --clr-beige-100: #dfd0b8;
+  --clr-white: #ffffff;
 
-  --accent-clr-100: #ffffff;
+  --accent-clr-100: #dfd0b8;
 
-  --text-primary: var(--clr-beige-100);
+  --text-primary: var(--clr-white);
 }
 
 * {
@@ -22,8 +22,21 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: var(--primary-clr-900);
+  color: var(--text-primary);
 }
 
 header > h1 {
   font-weight: 800;
+}
+
+button {
+  color: inherit;
+  background-color: inherit;
+  border: 3px solid var(--accent-clr-100);
+}
+
+.otp {
+  background-color: var(--secondary-clr-600);
+  padding: 1rem 2rem;
 }
