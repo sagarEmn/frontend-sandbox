@@ -1,0 +1,29 @@
+@import "reset.css";
+
+:root {
+  --primary-clr-900: #222831;
+  --secondary-clr-600: #393e46;
+  --tertiary-clr-300: #948979;
+
+  --clr-beige-100: #dfd0b8;
+
+  --accent-clr-100: #ffffff;
+
+  --text-primary: var(--clr-beige-100);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header > h1 {
+  font-weight: 800;
+}
