@@ -1,24 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="./src/style.css" />
+
     <title>OTP UI</title>
   </head>
   <body>
-    <article>
-      <header>
-        <h1>
-          Verify your Account
-        </h1>
-        <p>
+    <section class="otp otp__container">
+      <header class="otp__header">
+        <h1 class="otp__header__title">Verify your Account</h1>
+        <p class="otp__header_description" id="otp-description">
           Enter your OTP code:
         </p>
       </header>
 
-      <div class="otp-field">
-        
+      <form class="otp__form" aria-labelledby="otp-description">
+        <input type="number" maxlength="1" class="otp__input-field" autofocus />
+        <input type="number" maxlength="1" class="otp__input-field" />
+        <input type="number" maxlength="1" class="otp__input-field" />
+        <input type="number" maxlength="1" class="otp__input-field" />
+        <input type="number" maxlength="1" class="otp__input-field" />
+        <input type="number" maxlength="1" class="otp__input-field" />
+
+        <button type="submit" class="otp__verify-button" disabled>
+          Verify
+        </button>
+      </form>
+
+      <div class="otp__resend-btn">Resend</div>
+      <div class="otp__resend-countdown">
+        Resend code in <span id="timer">60</span> seconds
       </div>
-    </article>
+
+      <div class="otp-success-status">
+        <div class="otp-success">Verification Successful!</div>
+        <div class="error-message">Invalid verification code</div>
+      </div>
+    </section>
   </body>
 </html>
