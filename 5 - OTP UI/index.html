@@ -28,12 +28,19 @@
       </header>
 
       <form class="otp__form" aria-labelledby="otp-description">
-        <input type="number" maxlength="1" class="otp__input-field" autofocus />
-        <input type="number" maxlength="1" class="otp__input-field" />
-        <input type="number" maxlength="1" class="otp__input-field" />
-        <input type="number" maxlength="1" class="otp__input-field" />
-        <input type="number" maxlength="1" class="otp__input-field" />
-        <input type="number" maxlength="1" class="otp__input-field" />
+        <div class="otp__input-group">
+          <input
+            type="number"
+            maxlength="1"
+            class="otp__input-field"
+            autofocus
+          />
+          <input type="number" maxlength="1" class="otp__input-field" />
+          <input type="number" maxlength="1" class="otp__input-field" />
+          <input type="number" maxlength="1" class="otp__input-field" />
+          <input type="number" maxlength="1" class="otp__input-field" />
+          <input type="number" maxlength="1" class="otp__input-field" />
+        </div>
 
         <button type="submit" class="otp__verify-button" disabled>
           Verify
