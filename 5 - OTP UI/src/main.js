@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (remainingTime <= 0) {
         clearInterval(timerInterval);
-        resendButton.style.displya = "block";
+        resendButton.style.display = "block";
         resendCountdown.style.display = "none";
       }
     }, 1000);
