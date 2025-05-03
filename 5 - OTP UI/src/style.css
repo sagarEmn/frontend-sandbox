@@ -44,6 +44,12 @@ button {
   background-color: var(--secondary-clr-600);
   padding: 1rem 2rem;
   border-radius: var(--border-radius-lg);
+  max-width: fit-content;
+}
+
+.otp__header {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .otp__form {
@@ -72,6 +78,17 @@ button {
   margin: 0;
 }
 
-.otp__verify-button {
+.otp__verify-button, .otp__resend-button {
   border-radius: var(--border-radius-sm);
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.otp__resend-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.otp__resend-countdown {
+  margin-top: 1rem;
 }

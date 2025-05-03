@@ -22,7 +22,7 @@
     <section class="otp otp__container">
       <header class="otp__header">
         <h1 class="otp__header__title">Verify your Account</h1>
-        <p class="otp__header_description" id="otp-description">
+        <p class="otp__header-description" id="otp-description">
           Enter your OTP code:
         </p>
       </header>
@@ -47,9 +47,11 @@
         </button>
       </form>
 
-      <button class="otp__resend-btn">Resend</button>
-      <div class="otp__resend-countdown">
-        Resend code in <span id="timer">60</span> seconds
+      <div class="otp__resend-container">
+        <button class="otp__resend-button">Resend</button>
+        <div class="otp__resend-countdown">
+          Resend code in <span id="timer">60</span> seconds
+        </div>
       </div>
 
       <div class="otp-success-status">
@@ -59,6 +61,6 @@
     </section>
 
     <!-- js link -->
-     <script src="./src/main.js"></script>
+    <script src="./src/main.js"></script>
   </body>
 </html>
