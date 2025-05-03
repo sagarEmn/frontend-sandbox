@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // reference to DOM elements
     const inputFields = document.querySelectorAll(".otp__input-field");
     const verifyButton = document.querySelector(".otp__verify-button");
+    const resendButton = document.querySelector('.otp__resend-button');
     const resendCountdown = document.querySelector('.otp__resend-countdown');
     const timerElement = document.getElementById('timer');
     const successMessage = document.querySelector('.otp-success');
