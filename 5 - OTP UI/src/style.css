@@ -85,7 +85,8 @@ button {
 }
 
 .otp__resend-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: 1rem 0;
 }
 
