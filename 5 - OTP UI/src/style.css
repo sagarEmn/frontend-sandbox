@@ -1,15 +1,19 @@
 @import "reset.css";
 
 :root {
-  --primary-clr-900: #000000;
-  --secondary-clr-600: #303030;
-  --tertiary-clr-300: #948979;
+  --primary-clr-900: #16161a; /* Very dark grey */
+  --secondary-clr-600: #242629; /* Dark grey */
+  --tertiary-clr-300: #94a1b2; /* Muted blue-grey */
 
-  --clr-white: #ffffff;
+  --clr-white: #fffffe; /* Off-white */
 
-  --accent-clr-100: #dfd0b8;
+  --accent-clr-100: #7f5af0; /* Bright purple */
 
-  --text-primary: var(--clr-white);
+  --text-primary: var(--clr-white); /* Uses the new off-white */
+
+  /* border-radius variables */
+  --border-radius-lg: 1rem;
+  --border-radius-sm: 8px;
 }
 
 * {
@@ -39,7 +43,7 @@ button {
 .otp {
   background-color: var(--secondary-clr-600);
   padding: 1rem 2rem;
-  border-radius: 1rem;
+  border-radius: var(--border-radius-lg);
 }
 
 .otp__form {
@@ -56,14 +60,18 @@ button {
   outline: none;
   text-align: center;
   border: 2px solid var(--clr-white);
+  border-radius: var(--border-radius-sm);
   background: none;
   color: var(--text-primary);
-  border-radius: 5px;
   margin: 0;
 }
 
-.otp__input-field::-webkit-inner-spin-button, 
+.otp__input-field::-webkit-inner-spin-button,
 .otp__input-field::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.otp__verify-button {
+  border-radius: var(--border-radius-sm);
 }
