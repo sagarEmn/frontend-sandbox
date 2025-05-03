@@ -14,14 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // timer
   let timerInterval;
-  let remainingTime = 60;
+  let remainingTime = 2;
 
   // function to start and reset the countdown timer
   const startCountdown = () => {
     resendButton.style.display = "none";
     resendCountdown.style.display = "block";
 
-    remainingTime = 60;
+    remainingTime = 2;
     timerElement.textContent = remainingTime;
 
     clearInterval(timerInterval);
@@ -38,4 +38,23 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   startCountdown();
+
+  resendButton.addEventListener("click", () => {
+    // Clear input fields
+    inputFields.forEach((input) => {
+      input.value = "";
+    });
+
+    // Reset form state
+    verifyButton.disabled = true;
+    successMessage.style.display = "none";
+    errorMessage.style.display = "none";
+
+    // Restart countdown
+    startCountdown();
+
+    // focus on first input field
+    inputFields[0].focus();
+    
+  });
 });
