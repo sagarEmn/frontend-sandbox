@@ -85,5 +85,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
       checkInputs();
     });
+
+    // keyboard navigation
+    input.addEventListener("keydown", (e) => {
+      // Move to the previous input field on backspace if current field is empty
+      if (e.key === "Backspace" && !input.value && index > 0) {
+        inputFields[index - 1].focus();
+      }
+
+      // Arrow key navigation
+      if (e.key === "ArrowLeft" && index > 0) {
+        inputFields[index - 1].focus();
+      }
+
+      if (e.key === "ArrowRight" && index < inputFields.length - 1) {
+        inputFields[index + 1].focus();
+      }
+    });
   });
 });
