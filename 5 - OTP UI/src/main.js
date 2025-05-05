@@ -102,5 +102,34 @@ document.addEventListener("DOMContentLoaded", () => {
         inputFields[index + 1].focus();
       }
     });
+
+    // Handle paste event
+    input.addEventListener("paste", (e) => {
+      e.preventDefault();
+
+      const pastedText = e.clipboardData.getData("text");
+
+      // Check if the pasted data contains digits
+      if (pastedText && /^\d+$/.test(pastedText)) {
+        // Distribute digits across input fields
+        const digits = pastedText.split("");
+
+        // the outer loop iterates through all the input fields to attach event listeners (input, keydown, paste)
+        
+        // inner loop iterates through all the input fields again to distribute the pasted digits
+
+        // pasting of digits start only from the index that i'm currently in
+
+        inputFields.forEach((field, i) => {
+          if (
+            i >= index &&
+            i < inputFields.length &&
+            i - index < digits.length
+          ) {
+            field.value = digits[i - index];
+          }
+        });
+      }
+    });
   });
 });
