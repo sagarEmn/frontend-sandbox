@@ -55,6 +55,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // focus on first input field
     inputFields[0].focus();
-    
   });
+
+  const checkInput = () => {
+    let allFilled = true;
+
+    inputFields.forEach(input => {
+      if(!input.value) {
+        allFilled = false;
+      }
+    });
+
+    verifyButton.disabled = !allFilled;
+  }
+
+  inputFields.forEach((input, index) => {
+    input.addEventListener("input", (e) => {
+      const currentValue = e.target.value;
+
+      if (currentValue > 1) {
+        input.value = currentValue.slice(0, 1);
+      }
+    })
+  })
 });
