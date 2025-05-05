@@ -57,25 +57,33 @@ document.addEventListener("DOMContentLoaded", () => {
     inputFields[0].focus();
   });
 
-  const checkInput = () => {
+  const checkInputs = () => {
     let allFilled = true;
 
-    inputFields.forEach(input => {
-      if(!input.value) {
+    inputFields.forEach((input) => {
+      if (!input.value) {
         allFilled = false;
       }
     });
 
     verifyButton.disabled = !allFilled;
-  }
+  };
 
   inputFields.forEach((input, index) => {
     input.addEventListener("input", (e) => {
       const currentValue = e.target.value;
 
+      // ensure only one digit is entered
       if (currentValue > 1) {
         input.value = currentValue.slice(0, 1);
       }
-    })
-  })
+
+      // move to the next input field
+      if (currentValue && index < inputFields.length - 1) {
+        inputFields[index + 1].focus();
+      }
+
+      checkInputs();
+    });
+  });
 });
