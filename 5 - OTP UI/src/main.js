@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const digits = pastedText.split("");
 
         // the outer loop iterates through all the input fields to attach event listeners (input, keydown, paste)
-        
+
         // inner loop iterates through all the input fields again to distribute the pasted digits
 
         // pasting of digits start only from the index that i'm currently in
@@ -129,6 +129,15 @@ document.addEventListener("DOMContentLoaded", () => {
             field.value = digits[i - index];
           }
         });
+
+        // focus on the next empty field
+        const nextEmptyIndex = Array.from(inputFields).findIndex(
+          (field) => !field.value
+        );
+
+        if (nextEmptyIndex !== -1) {
+          inputFields;
+        }
       }
     });
   });
