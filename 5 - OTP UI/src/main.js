@@ -140,6 +140,9 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           inputFields[inputFields.length - 1].focus();
         }
+
+        // check if all inputs are filled
+        checkInputs();
       }
     });
   });
