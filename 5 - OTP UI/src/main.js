@@ -136,7 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         if (nextEmptyIndex !== -1) {
-          inputFields;
+          inputFields[nextEmptyIndex].focus();
+        } else {
+          inputFields[inputFields.length - 1].focus();
         }
       }
     });
