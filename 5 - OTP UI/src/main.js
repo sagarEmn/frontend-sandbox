@@ -146,4 +146,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Form submission
+  document.querySelector(".otp__form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Get the full OTP code from all inputs
+    let otpCode = "";
+    inputFields.forEach((input) => {
+      console.log("Fetching otp code...");
+
+      let repetitionCount = 1;
+      const maxRepetition = 4;
+
+      const intervalId = setInterval(async () => {
+        if (repetitionCount < maxRepetition) {
+          const timer = async () => {
+            console.log(`In ${repetitionCount}`);
+            repetitionCount++;
+          };
+
+          console.log("repetitionCount: ", repetitionCount);
+
+          await timer();
+        } else {
+          clearInterval(intervalId);
+        }
+      }, 1000);
+      otpCode += input.value;
+      console.log("OTP Code:", otpCode);
+    });
+  });
 });
