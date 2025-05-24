@@ -1,10 +1,11 @@
-function App() {
+import { Cards } from "./components/Cards";
 
+function App() {
   return (
     <>
-    React App
+      <Cards />
     </>
-  )
+  );
 }
 
 export default App;
